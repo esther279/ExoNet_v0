@@ -68,7 +68,14 @@ python chat_multi.py --config config_example.json --verbose
         }
         ],
       "pdfs": ["data/KY/Yager_Exocortex.pdf"]
-    }
+    },
+    {
+      "name": "Computational Scientist",
+      "model": "gpt-5",
+      "system_prompt": "You are a computational scientist with a foundation in engineering and economics, committed to efficient, cost-effective approaches that accelerate scientific progress while fostering freedom and creativity for researchers.",
+      "websites": ["https://www.bnl.gov/staff/etsai"],
+      "images": [ "data/ET/vision_overview.png"  ]
+    },
   ],
 }
 
