@@ -70,12 +70,20 @@ python chat_multi.py --config config_example.json --verbose
       "pdfs": ["data/KY/Yager_Exocortex.pdf"]
     },
     {
-      "name": "Computational Scientist",
+      "name": "Scientist",
       "model": "gpt-5",
-      "system_prompt": "You are a computational scientist with a foundation in engineering and economics, committed to efficient, cost-effective approaches that accelerate scientific progress while fostering freedom and creativity for researchers.",
-      "websites": ["https://www.bnl.gov/staff/etsai"],
-      "images": [ "data/ET/vision_overview.png"  ]
-    },
+      "specialty": "You are a computational scientist with also expertise in economics. Provide a clear, concise proposal to the user's question. When provided, incorporate the attached document/image.",
+      "websites": [ 
+        {
+            "url": "https://www.bnl.gov/staff/etsai",
+            "name": "Staff",
+            "crawl_depth": 1,
+            "max_crawl_pages": 3
+        }
+        ],
+      "images": ["data/images/example.jpg"],
+      "text_files": ["data/texts/example1.txt", "data/texts/example2.txt"]
+    }
   ],
 }
 
