@@ -45,7 +45,7 @@ python chat_multi.py --config config_example.json --verbose
   "max_tokens": 128000,
   "rounds": 5,
   "clean_slate": true,
-  "interaction_order": [1],
+  "interaction_order": [1, 2, 1],
   "default_question": "Which is more important in DOE national laboratories, choose one: (A) data and AI security, (B) develop and deploy AI agents for science",
   "agents": [
     {
