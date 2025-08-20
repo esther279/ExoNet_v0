@@ -71,10 +71,10 @@ def read_text_file(file_path):
         return file.read()
 
 def save_web_context_to_logs(url: str, content: str, agent_name: str = "Unknown") -> str:
-    """Save web crawled context to logs_api/web/ directory"""
+    """Save web crawled context to logs/web/ directory"""
     try:
         # Create web logs directory
-        web_log_dir = Path("logs_api/web")
+        web_log_dir = Path("logs/web")
         web_log_dir.mkdir(parents=True, exist_ok=True)
         
         # Create filename from URL and timestamp

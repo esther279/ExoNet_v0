@@ -1,8 +1,9 @@
-# ExoNet: Idea Illustration/Feasiblity 
+# ExoNet: Idea Illustration & Feasiblity 
 
 ## Overview
 
-This multi-agent framework in `chat_multi.py` offfers collaborative AI agents with their own specialized backgrounds/expertise and flexible interaction order.
+This simple multi-agent framework in `chat_multi.py` offers collaborative AI agents with their own specialized backgrounds/expertise and flexible interaction order!
+
 
 ## Key Features
 
@@ -20,6 +21,20 @@ This multi-agent framework in `chat_multi.py` offfers collaborative AI agents wi
 - **Multiple Rounds**: Configurable deliberation cycles. Each round contains the entire list of interaction order. For example, two rounds would be [1, 3, 2, 4] and [1, 3, 2, 4]
 - **Collaborative Learning**: Agents build upon each other's responses
 - **Human interaction**: After running default_question for the specified number of rounds, user can prompt new questions. 
+
+
+
+## Usage
+
+### Command Line Interface
+```bash
+# Basic usage with config file
+python chat_multi.py --config config_example.json
+
+# Enable verbose output
+python chat_multi.py --config config_example.json --verbose
+
+```
 
 
 ### Example Configuration
@@ -59,21 +74,10 @@ This multi-agent framework in `chat_multi.py` offfers collaborative AI agents wi
 
 ```
 
-## Usage
 
-### Command Line Interface
-```bash
-# Basic usage with config file
-python chat_multi.py --config config_example.json
-
-# Enable verbose output
-python chat_multi.py --config config_example.json --verbose
-
-```
-
-
-### Suggestion
-- **max_tokens**: Higher max_tokens (6000-8000) for detailed analysis, while lower max_tokens (2000-4000) for concise responses. Note that if too constrained, model may have trouble outputting reasonable response. 
+### Suggestions
+- **Azure OpenAI**: The implementation employs direct calls via Azure OpenAI: API key, base, deployment name should be specified accordingly. See line 370 in `chat_multi.py` and specialize in `~/.bashrc` e.g. export AZURE_API_KEY=XXX
+- **max_tokens**: Higher max_tokens (6000-8000) for detailed analysis, while lower max_tokens for concise responses. However note that if too constrained, model may have trouble outputting reasonable response. 
 - **char_limit** For background information, web crawling, char_limit (e.g. 2000) should be chosen depending on the number of documents and the context window.
 - **clean_slate**: Starting fresh in every round allows for convenient repetition of the question across multiple rounds, acquiring statistical information to account for the model stochasticity.
 
