@@ -832,7 +832,7 @@ def interactive_multi_agent_chat(
     
     # Display global settings if available
     if config:
-        global_model = config.get('model', 'o3-mini')
+        global_model = config.get('model', 'gpt-5')
         global_temperature = config.get('temperature', 0.7)
         global_max_tokens = config.get('max_tokens', 10000)
         print(f"⚙️  Global Settings:")

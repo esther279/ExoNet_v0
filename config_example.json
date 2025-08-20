@@ -17,7 +17,7 @@
             "url": "https://www.bnl.gov/staff/kyager",
             "name": "Staff",
             "crawl_depth": 1,
-            "max_crawl_pages": 1
+            "max_crawl_pages": 2
         },   
         {
             "url": "http://yager-research.ca/",
@@ -26,14 +26,19 @@
             "max_crawl_pages": 10
         }
         ],
-      "pdfs": ["data/KY/Yager_2024_2406.17809v1.pdf"]
+      "pdfs": ["data/KY/Yager_Exocortex.pdf"],
+      "images": ["data/images/example.jpg"],
+      "text_files": ["data/texts/example1.txt", "data/texts/example2.txt"]
+    },
+    {
+      "name": "Artist",
+      "model": "gpt-5",
+      "specialty": "You are an artist who likes impressionist painters and also work part time at a farm. Provide a clear, concise proposal to the user's question. When provided, incorporate the attached document/image."
+    },
+    {
+      "name": "Summarizer",
+      "model": "gpt-5",
+      "specialty": "You are an AI summarizer. Provide a clear, concise proposal to the user's question by summarize the agent answers."
     }
-  ],
-  "crawl": {
-    "max_depth": 2,
-    "max_pages": 15,
-    "same_domain_only": true,
-    "include_patterns": [],
-    "exclude_patterns": []
-  }
+  ]
 }
