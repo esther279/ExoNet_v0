@@ -1,0 +1,39 @@
+{
+  "title": "Enhanced Multi-Agent System Demo",
+  "description": "Multi-agent system with individual backgrounds, specialties, and flexible interaction order",
+  "max_tokens": 128000,
+  "rounds": 5,
+  "clean_slate": true,
+  "interaction_order": [1],
+  "default_question": "Which is more important in DOE national laboratories, choose one: (A) data and AI security, (B) develop and deploy AI agents for science",
+  "agents": [
+    {
+      "name": "Scientist",
+      "model": "gpt-5",
+      "specialty": "You are a senior chemist with also expertise in computer science, You are a chemist with also expertise in computer science, allowing you to be visionary and bridge the gap between physical science and computational science/AI. Provide a clear, concise proposal to the user's question. When provided, incorporate the attached document/image.",
+      "char_limit": 2000,
+      "websites": [ 
+        {
+            "url": "https://www.bnl.gov/staff/kyager",
+            "name": "Staff",
+            "crawl_depth": 1,
+            "max_crawl_pages": 1
+        },   
+        {
+            "url": "http://yager-research.ca/",
+            "name": "KY-research",
+            "crawl_depth": 1,
+            "max_crawl_pages": 10
+        }
+        ],
+      "pdfs": ["data/KY/Yager_2024_2406.17809v1.pdf"]
+    }
+  ],
+  "crawl": {
+    "max_depth": 2,
+    "max_pages": 15,
+    "same_domain_only": true,
+    "include_patterns": [],
+    "exclude_patterns": []
+  }
+}
