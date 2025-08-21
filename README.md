@@ -91,7 +91,7 @@ python chat_multi.py --config config_example.json --verbose
 
 
 ### Suggestions
-- **Azure OpenAI**: The implementation employs direct calls via Azure OpenAI: API key, base, deployment name should be specified accordingly. See line 370 in `chat_multi.py` and specialize in `~/.bashrc` e.g. export AZURE_API_KEY=XXX
+- **Azure OpenAI**: The implementation employs direct calls via Azure OpenAI: API key, base, deployment name should be specified accordingly. See line 370 in `chat_multi.py` and specify accordingly in `~/.bashrc` e.g. export AZURE_API_KEY=XXX
 - **max_tokens**: Higher max_tokens (6000-8000) for detailed analysis, while lower max_tokens for concise responses. However note that if too constrained, model may have trouble outputting reasonable response. 
 - **char_limit** For background information, web crawling, char_limit (e.g. 2000) should be chosen depending on the number of documents and the context window.
 - **clean_slate**: Starting fresh in every round allows for convenient repetition of the question across multiple rounds, acquiring statistical information to account for the model stochasticity.
