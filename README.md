@@ -4,6 +4,8 @@
 
 This simple multi-agent framework in `chat_multi.py` offers collaborative AI agents with their own specialized backgrounds/expertise and flexible interaction order!
 
+**Citation**: 
+Tsai, Esther HR, and Kevin G. Yager. "Exocortex Network for AI-Augmented Human-Led Scientific Expedition." Photon Science (2025). https://doi.org/10.1021/photonsci.5c00009 
 
 ## Key Features
 
